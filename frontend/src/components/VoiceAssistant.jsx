@@ -135,7 +135,7 @@ export default function VoiceAssistant() {
     
     try {
       const token = localStorage.getItem("token");
-      await fetch(`${API_URL}/chats/${chatId}`), {
+      await fetch(`${API_URL}/chats/${chatId}`, {
         method: "DELETE",
         headers: { "Authorization": `Bearer ${token}` }
       });
